@@ -1,3 +1,5 @@
-const Landing: React.FC = () => <div>Hello World!</div>
+import { Text } from '@chakra-ui/react'
+
+const Landing: React.FC = () => <Text>Hello World!</Text>
 
 export default Landing
