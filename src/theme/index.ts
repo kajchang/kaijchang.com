@@ -18,7 +18,7 @@ const overrides: ThemeOverride = {
         content: '""',
         position: 'absolute',
         width: 0,
-        height: `calc(100% + ${props.theme.space[0.5]})`,
+        height: '100%',
         display: 'block',
         right: 0,
         top: 0,
@@ -30,8 +30,19 @@ const overrides: ThemeOverride = {
         width: '100%',
         left: 0,
       },
-    })
-  }
+      'ul': {
+        listStyle: 'none',
+        marginLeft: 0,
+        paddingLeft: '1em',
+      },
+      'li:before': {
+        display: 'inline-block',
+        content: '"-"',
+        width: '1em',
+        marginLeft: '-1em',
+      }
+    }),
+  },
 }
 
 const customTheme = extendTheme(overrides as any)
