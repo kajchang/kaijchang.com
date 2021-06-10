@@ -2,7 +2,9 @@ import {
 	Box,
 	Container,
 	Divider,
+	DividerProps,
 	Heading,
+	HeadingProps,
 	Link,
 	List,
 	ListItem,
@@ -10,10 +12,32 @@ import {
 	Text,
 } from '@chakra-ui/react'
 
+const SectionDivider: React.FC<DividerProps> = (props) => (
+	<Divider
+		borderStyle="dashed groove"
+		borderColor="orange.400"
+		borderTopWidth={0}
+		borderBottomWidth={2}
+		{...props}
+	/>
+)
+
+const SectionVerticalHeading: React.FC<HeadingProps> = (props) => (
+	<Heading
+		position="absolute"
+		l={0}
+		mt={5}
+		fontWeight="extrabold"
+		letterSpacing="tight"
+		fontSize="xl"
+		transform="rotate(90deg)"
+		{...props}></Heading>
+)
+
 const Landing: React.FC = () => (
 	<Container maxW={400}>
-		<Stack alignItems="center" textAlign="center" py={12} spacing={6}>
-			<Stack>
+		<Stack textAlign="center" py={12} spacing={6}>
+			<Stack alignSelf="center">
 				<Heading
 					as="h1"
 					fontWeight="extrabold"
@@ -30,23 +54,9 @@ const Landing: React.FC = () => (
 					</Link>
 				</Text>
 			</Stack>
-			<Divider
-				borderStyle="dashed groove"
-				borderColor="orange.400"
-				borderTopWidth={0}
-				borderBottomWidth={2}
-			/>
-			<Box alignSelf="stretch" position="relative">
-				<Heading
-					position="absolute"
-					l={0}
-					mt={5}
-					fontWeight="extrabold"
-					letterSpacing="tight"
-					fontSize="xl"
-					transform="rotate(90deg)">
-					links
-				</Heading>
+			<SectionDivider />
+			<Box position="relative">
+				<SectionVerticalHeading>links</SectionVerticalHeading>
 				<List ml={16} textAlign="left">
 					<ListItem>
 						<Link href="mailto:kaijchang@gmail.com" isExternal>
@@ -67,6 +77,36 @@ const Landing: React.FC = () => (
 						<Link href="https://twitter.com/kachangggg" isExternal>
 							twitter
 						</Link>
+					</ListItem>
+				</List>
+			</Box>
+			<SectionDivider />
+			<Box position="relative">
+				<SectionVerticalHeading>more</SectionVerticalHeading>
+				<List ml={16} textAlign="left">
+					<ListItem>
+						<Link href="https://run.kaijchang.com" isExternal>
+							run.kaijchang.com
+						</Link>{' '}
+						— 👟 auto-generated running map
+					</ListItem>
+					<ListItem>
+						<Link href="https://firebrand.kaijchang.com" isExternal>
+							firebrand.kaijchang.com
+						</Link>{' '}
+						— 🇺🇸 toy site calculating ELO for U.S. politicians
+					</ListItem>
+					<ListItem>
+						<Link href="https://vote.lowellhs.org" isExternal>
+							vote.lowellhs.org
+						</Link>{' '}
+						— 🗳️ results of lowell's 2020 mock primary election survey
+					</ListItem>
+					<ListItem>
+						<Link href="https://studentsreview.me" isExternal>
+							studentsreview.me [closed]
+						</Link>{' '}
+						— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
 					</ListItem>
 				</List>
 			</Box>
