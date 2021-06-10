@@ -14,7 +14,11 @@ const Landing: React.FC = () => (
 	<Container maxW={400}>
 		<Stack alignItems="center" textAlign="center" py={12} spacing={6}>
 			<Stack>
-				<Heading fontWeight="extrabold" letterSpacing="tight" fontSize="2xl">
+				<Heading
+					as="h1"
+					fontWeight="extrabold"
+					letterSpacing="tight"
+					fontSize="2xl">
 					Kai Chang
 				</Heading>
 				<Text>장준수 | 张俊洙</Text>
