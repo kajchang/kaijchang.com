@@ -1,11 +1,11 @@
-import { Container, Link, Stack, Text } from '@chakra-ui/react'
+import { Container, Heading, Link, Stack, Text } from '@chakra-ui/react'
 
 const Landing: React.FC = () => (
 	<Container maxW={1312}>
 		<Stack alignItems="center" textAlign="center" py={12}>
-			<Text fontWeight="semibold" fontSize="2xl">
+			<Heading fontWeight="extrabold" fontSize="2xl">
 				Kai Chang
-			</Text>
+			</Heading>
 			<Text>준수 | 俊洙</Text>
 			<Text fontWeight="semibold">vassar college '25</Text>
 			<Text fontWeight="semibold">
