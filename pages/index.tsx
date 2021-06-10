@@ -108,6 +108,12 @@ const Landing: React.FC = () => (
 						</Link>{' '}
 						— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
 					</ListItem>
+					<ListItem>
+						<Link href="https://github.com/StudentVue" isExternal>
+							StudentVue
+						</Link>{' '}
+						— 🏫 collection of tools reverse-engineering StudentVue's SOAP API
+					</ListItem>
 				</List>
 			</Box>
 		</Stack>
