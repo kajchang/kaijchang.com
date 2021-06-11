@@ -1,6 +1,7 @@
 import {
 	Box,
 	Container,
+	Flex,
 	Heading,
 	List,
 	ListItem,
@@ -23,7 +24,15 @@ const Landing: React.FC = () => (
 					fontSize="2xl">
 					Kai Chang
 				</Heading>
-				<Text>장준수 | 张俊洙</Text>
+				<Flex direction="row" alignSelf="center" fontSize="lg">
+					<Text as="span" fontFamily="korean">
+						장준수
+					</Text>{' '}
+					|{' '}
+					<Text as="span" fontFamily="chinese">
+						张俊洙
+					</Text>
+				</Flex>
 				<Text fontWeight="semibold">vassar college '25</Text>
 				<Text fontWeight="semibold">
 					web development @{' '}

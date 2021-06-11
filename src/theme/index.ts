@@ -3,7 +3,9 @@ import { extendTheme, ThemeOverride } from '@chakra-ui/react'
 const overrides: ThemeOverride = {
   fonts: {
     body: 'Open Sans, sans-serif',
-    heading: 'Montserrat, sans-serif'
+    heading: 'Montserrat, sans-serif',
+    chinese: 'Ma Shan Zheng, cursive',
+    korean: 'Yeon Sung, cursive',
   },
   styles: {
     global: {
