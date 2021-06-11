@@ -3,7 +3,7 @@ import { RoughSVG } from 'roughjs/bin/svg'
 import rough from 'roughjs/bundled/rough.cjs.js'
 
 type RoughProps = {
-	init: (rc: RoughSVG, svg: SVGSVGElement) => void
+	init: (rc: RoughSVG, svg: SVGSVGElement, clear: () => void) => void
 } & SVGAttributes<SVGSVGElement>
 
 const Rough: React.FC<RoughProps> = ({ init, ...props }) => {
@@ -12,10 +12,12 @@ const Rough: React.FC<RoughProps> = ({ init, ...props }) => {
 			ref={(svg) => {
 				if (!svg) return
 				const rc = rough.svg(svg as unknown as SVGSVGElement)
-				while (svg.lastChild) {
-					svg.removeChild(svg.lastChild)
+				const clear = () => {
+					while (svg.lastChild) {
+						svg.removeChild(svg.lastChild)
+					}
 				}
-				init(rc, svg)
+				init(rc, svg, clear)
 			}}
 			{...props}
 		/>
