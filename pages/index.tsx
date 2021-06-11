@@ -2,7 +2,6 @@ import {
 	Box,
 	Container,
 	Heading,
-	Link,
 	List,
 	ListItem,
 	Stack,
