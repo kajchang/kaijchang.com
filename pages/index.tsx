@@ -1,10 +1,7 @@
 import {
 	Box,
 	Container,
-	Divider,
-	DividerProps,
 	Heading,
-	HeadingProps,
 	Link,
 	List,
 	ListItem,
@@ -12,27 +9,8 @@ import {
 	Text,
 } from '@chakra-ui/react'
 
-const SectionDivider: React.FC<DividerProps> = (props) => (
-	<Divider
-		borderStyle="dashed groove"
-		borderColor="orange.400"
-		borderTopWidth={0}
-		borderBottomWidth={2}
-		{...props}
-	/>
-)
-
-const SectionVerticalHeading: React.FC<HeadingProps> = (props) => (
-	<Heading
-		position="absolute"
-		l={0}
-		mt={5}
-		fontWeight="extrabold"
-		letterSpacing="tight"
-		fontSize="xl"
-		transform="rotate(90deg)"
-		{...props}></Heading>
-)
+import SectionDivider from '../src/components/section-divider'
+import SectionVerticalHeading from '../src/components/section-vertical-heading'
 
 const Landing: React.FC = () => (
 	<Container maxW={400}>
