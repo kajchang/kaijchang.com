@@ -6,13 +6,9 @@ const overrides: ThemeOverride = {
     heading: 'Montserrat, sans-serif'
   },
   styles: {
-    global: props => ({
-      'a': {
-        position: 'relative',
-        textDecoration: 'underline !important',
-        textDecorationColor: 'var(--chakra-colors-orange-400) !important',
-        textDecorationThickness: `${props.theme.space[0.5]} !important`,
-        textUnderlineOffset: `${props.theme.space[0.5]}`,
+    global: {
+      'a:link, a:visited, a:hover, a:active': {
+        textDecoration: 'none !important',
       },
       'a:after': {
         content: '""',
@@ -41,7 +37,7 @@ const overrides: ThemeOverride = {
         width: '1em',
         marginLeft: '-1em',
       }
-    }),
+    },
   },
 }
 

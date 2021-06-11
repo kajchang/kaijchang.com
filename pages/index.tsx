@@ -11,6 +11,7 @@ import {
 
 import SectionDivider from '../src/components/section-divider'
 import SectionVerticalHeading from '../src/components/section-vertical-heading'
+import RoughUnderlinedLink from '../src/components/rough-underlined-link'
 
 const Landing: React.FC = () => (
 	<Container maxW={400}>
@@ -27,9 +28,9 @@ const Landing: React.FC = () => (
 				<Text fontWeight="semibold">vassar college '25</Text>
 				<Text fontWeight="semibold">
 					web development @{' '}
-					<Link href="https://petcodeusa.com" isExternal>
+					<RoughUnderlinedLink href="https://petcodeusa.com" isExternal>
 						petcode
-					</Link>
+					</RoughUnderlinedLink>
 				</Text>
 			</Stack>
 			<SectionDivider />
@@ -37,24 +38,28 @@ const Landing: React.FC = () => (
 				<SectionVerticalHeading>links</SectionVerticalHeading>
 				<List ml={16} textAlign="left">
 					<ListItem>
-						<Link href="mailto:kaijchang@gmail.com" isExternal>
+						<RoughUnderlinedLink href="mailto:kaijchang@gmail.com" isExternal>
 							kaijchang@gmail.com
-						</Link>
+						</RoughUnderlinedLink>
 					</ListItem>
 					<ListItem>
-						<Link href="https://github.com/kajchang" isExternal>
+						<RoughUnderlinedLink href="https://github.com/kajchang" isExternal>
 							github
-						</Link>
+						</RoughUnderlinedLink>
 					</ListItem>
 					<ListItem>
-						<Link href="https://www.linkedin.com/in/kai-j-chang" isExternal>
+						<RoughUnderlinedLink
+							href="https://www.linkedin.com/in/kai-j-chang"
+							isExternal>
 							linkedin
-						</Link>
+						</RoughUnderlinedLink>
 					</ListItem>
 					<ListItem>
-						<Link href="https://twitter.com/kachangggg" isExternal>
+						<RoughUnderlinedLink
+							href="https://twitter.com/kachangggg"
+							isExternal>
 							twitter
-						</Link>
+						</RoughUnderlinedLink>
 					</ListItem>
 				</List>
 			</Box>
@@ -63,33 +68,37 @@ const Landing: React.FC = () => (
 				<SectionVerticalHeading>more</SectionVerticalHeading>
 				<List ml={16} textAlign="left">
 					<ListItem>
-						<Link href="https://run.kaijchang.com" isExternal>
+						<RoughUnderlinedLink href="https://run.kaijchang.com" isExternal>
 							run.kaijchang.com
-						</Link>{' '}
+						</RoughUnderlinedLink>{' '}
 						— 👟 auto-generated running map
 					</ListItem>
 					<ListItem>
-						<Link href="https://firebrand.kaijchang.com" isExternal>
+						<RoughUnderlinedLink
+							href="https://firebrand.kaijchang.com"
+							isExternal>
 							firebrand.kaijchang.com
-						</Link>{' '}
+						</RoughUnderlinedLink>{' '}
 						— 🇺🇸 toy site calculating ELO for U.S. politicians
 					</ListItem>
 					<ListItem>
-						<Link href="https://vote.lowellhs.org" isExternal>
+						<RoughUnderlinedLink href="https://vote.lowellhs.org" isExternal>
 							vote.lowellhs.org
-						</Link>{' '}
+						</RoughUnderlinedLink>{' '}
 						— 🗳️ results of lowell's 2020 mock primary election survey
 					</ListItem>
 					<ListItem>
-						<Link href="https://studentsreview.me" isExternal>
+						<RoughUnderlinedLink href="https://studentsreview.me" isExternal>
 							studentsreview.me [closed]
-						</Link>{' '}
+						</RoughUnderlinedLink>{' '}
 						— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
 					</ListItem>
 					<ListItem>
-						<Link href="https://github.com/StudentVue" isExternal>
+						<RoughUnderlinedLink
+							href="https://github.com/StudentVue"
+							isExternal>
 							StudentVue
-						</Link>{' '}
+						</RoughUnderlinedLink>{' '}
 						— 🏫 collection of tools reverse-engineering StudentVue's SOAP API
 					</ListItem>
 				</List>
