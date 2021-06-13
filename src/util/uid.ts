@@ -1,5 +1,5 @@
 const generateUID = () => {
-  let counter = 0
+  let counter = 1
   return () => {
     return counter++
   }
