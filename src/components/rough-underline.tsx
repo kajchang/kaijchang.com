@@ -15,10 +15,10 @@ const RoughUnderline: React.FC<SVGAttributes<SVGSVGElement>> = (props) => {
 				bottom: 1.5,
 				zIndex: -1,
 			}}
-			height={2}
+			height={3}
 			init={(rc, svg) => {
 				const bounds = svg.getBoundingClientRect()
-				let node = rc.line(0, 1, bounds.width, 1, {
+				let node = rc.line(0, 1.5, bounds.width, 1.5, {
 					stroke: 'var(--chakra-colors-orange-400)',
 					seed,
 				})
