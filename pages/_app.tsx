@@ -10,6 +10,10 @@ const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 		<ChakraProvider theme={customTheme}>
 			<Head>
 				<title>Kai Chang</title>
+				<meta
+					name="description"
+					content="Kai Chang · web development @ petcode"
+				/>
 			</Head>
 			<Component {...pageProps} />
 		</ChakraProvider>

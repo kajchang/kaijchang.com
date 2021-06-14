@@ -16,7 +16,7 @@ import RoughUnderlinedLink from '../src/components/rough-underlined-link'
 const Landing: React.FC = () => (
 	<Container maxW={400}>
 		<Stack textAlign="center" py={12} spacing={6}>
-			<Stack alignSelf="center">
+			<Stack as="section" alignSelf="center">
 				<Heading
 					as="h1"
 					fontWeight="extrabold"
@@ -42,7 +42,7 @@ const Landing: React.FC = () => (
 				</Text>
 			</Stack>
 			<SectionDivider />
-			<Box position="relative">
+			<Box as="section" position="relative">
 				<SectionVerticalHeading>links</SectionVerticalHeading>
 				<List ml={16} textAlign="left">
 					<ListItem>
@@ -72,7 +72,7 @@ const Landing: React.FC = () => (
 				</List>
 			</Box>
 			<SectionDivider />
-			<Box position="relative">
+			<Box as="section" position="relative">
 				<SectionVerticalHeading>more</SectionVerticalHeading>
 				<List ml={16} textAlign="left">
 					<ListItem>
