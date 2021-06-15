@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
 import {
-	Box,
 	Container,
 	Flex,
 	Heading,
@@ -10,7 +9,6 @@ import {
 	Text,
 } from '@chakra-ui/react'
 
-import moment from 'moment'
 import firebaseAdmin from 'modules/firebase-admin'
 
 import Section from 'components/section'
@@ -18,6 +16,11 @@ import SectionDivider from 'components/section-divider'
 import SectionVerticalHeading from 'components/section-vertical-heading'
 import RoughUnderlinedLink from 'components/rough-underlined-link'
 import Stat from 'components/stat'
+
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+
+dayjs.extend(relativeTime)
 
 type LandingPageProps = {
 	hits: number
@@ -144,7 +147,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 				<br />
 				<Text>
 					this page has <Stat>{hits}</Stat> hits since <Stat>6/14/21</Stat>, as
-					of <Stat>{moment(revalidatedAt).fromNow()}</Stat>.
+					of <Stat>{dayjs(revalidatedAt).fromNow()}</Stat>.
 				</Text>
 			</Section>
 		</Stack>
@@ -162,7 +165,7 @@ export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
 	return {
 		props: {
 			hits,
-			revalidatedAt: new Date().toString(),
+			revalidatedAt: new Date().toISOString(),
 		},
 		revalidate: 5 * 60,
 	}
