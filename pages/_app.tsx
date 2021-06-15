@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import '../src/styles/global.css'
@@ -17,11 +18,15 @@ const clickListener = (e: React.MouseEvent<HTMLElement>) => {
 }
 
 const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+	const router = useRouter()
+
 	useEffect(() => {
-		fetch('/api/hit')
-		document.addEventListener('click', clickListener as any)
-		return () => document.removeEventListener('click', clickListener as any)
-	}, [])
+		if (router.isReady && !router.query.dont_track) {
+			fetch('/api/hit')
+			document.addEventListener('click', clickListener as any)
+			return () => document.removeEventListener('click', clickListener as any)
+		}
+	}, [router.isReady])
 
 	return (
 		<ChakraProvider theme={customTheme}>
