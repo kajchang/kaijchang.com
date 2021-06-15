@@ -1,6 +1,6 @@
 import { Link, LinkProps } from '@chakra-ui/react'
 
-import RoughUnderline from './rough-underline'
+import RoughUnderline from 'components/rough-underline'
 
 const RoughUnderlinedLink: React.FC<LinkProps> = ({ children, ...props }) => (
 	<Link position="relative" {...props}>

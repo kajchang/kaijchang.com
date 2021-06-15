@@ -1,7 +1,7 @@
 import { SVGAttributes, useMemo } from 'react'
-import uid from '../util/uid'
+import uid from 'util/uid'
 
-import Rough from './rough'
+import Rough from 'components/rough'
 
 const RoughUnderline: React.FC<SVGAttributes<SVGSVGElement>> = (props) => {
 	const seed = useMemo(() => uid(), [])

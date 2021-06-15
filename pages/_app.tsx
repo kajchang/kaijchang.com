@@ -4,10 +4,10 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ChakraProvider } from '@chakra-ui/react'
 
-import '../src/styles/global.css'
-import customTheme from '../src/theme'
+import 'styles/global.css'
+import customTheme from 'theme'
 
-import { hit, outbound } from '../src/modules/analytics'
+import { hit, outbound } from 'modules/analytics'
 
 const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 	const router = useRouter()

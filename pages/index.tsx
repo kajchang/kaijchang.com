@@ -11,13 +11,13 @@ import {
 } from '@chakra-ui/react'
 
 import moment from 'moment'
-import firebaseAdmin from '../src/modules/firebase-admin'
+import firebaseAdmin from 'modules/firebase-admin'
 
-import Section from '../src/components/section'
-import SectionDivider from '../src/components/section-divider'
-import SectionVerticalHeading from '../src/components/section-vertical-heading'
-import RoughUnderlinedLink from '../src/components/rough-underlined-link'
-import Stat from '../src/components/stat'
+import Section from 'components/section'
+import SectionDivider from 'components/section-divider'
+import SectionVerticalHeading from 'components/section-vertical-heading'
+import RoughUnderlinedLink from 'components/rough-underlined-link'
+import Stat from 'components/stat'
 
 type LandingPageProps = {
 	hits: number

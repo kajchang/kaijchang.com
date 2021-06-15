@@ -1,6 +1,6 @@
 import { NextApiHandler } from 'next'
 import { firestore } from 'firebase-admin'
-import firebaseAdmin from '../../src/modules/firebase-admin'
+import firebaseAdmin from 'modules/firebase-admin'
 
 const handler: NextApiHandler = async (req, res) => {
   const href = req.query.href
