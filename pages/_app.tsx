@@ -7,22 +7,20 @@ import { ChakraProvider } from '@chakra-ui/react'
 import '../src/styles/global.css'
 import customTheme from '../src/theme'
 
-const clickListener = (e: React.MouseEvent<HTMLElement>) => {
-	if ((e.target as HTMLElement).localName === 'a') {
-		fetch(
-			`/api/outbound?href=${encodeURIComponent(
-				(e.target as HTMLAnchorElement).href,
-			)}`,
-		)
-	}
-}
+import { hit, outbound } from '../src/modules/analytics'
 
 const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 	const router = useRouter()
 
 	useEffect(() => {
+		const clickListener = (e: React.MouseEvent<HTMLElement>) => {
+			if ((e.target as HTMLElement).localName === 'a') {
+				outbound((e.target as HTMLAnchorElement).href)
+			}
+		}
+
 		if (router.isReady && !router.query.dont_track) {
-			fetch('/api/hit')
+			hit()
 			document.addEventListener('click', clickListener as any)
 			return () => document.removeEventListener('click', clickListener as any)
 		}
