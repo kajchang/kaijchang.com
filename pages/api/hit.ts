@@ -16,7 +16,7 @@ const handler: NextApiHandler = async (req, res) => {
 		.get()
 
 	let doc
-	if (query.docs.length === 0) {
+	if (query.empty) {
 		doc = firebaseAdmin.firestore().collection('pages').doc()
 		await doc.create({
 			path,

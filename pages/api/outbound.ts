@@ -14,7 +14,7 @@ const handler: NextApiHandler = async (req, res) => {
 
 
   let doc
-  if (query.docs.length === 0) {
+  if (query.empty) {
     doc = firebaseAdmin.firestore().collection('links').doc()
     await doc.create({
       href,

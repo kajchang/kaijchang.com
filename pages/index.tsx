@@ -160,7 +160,7 @@ export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
 		.collection('pages')
 		.where('path', '==', '/')
 		.get()
-	const hits = query.docs[0] ? query.docs[0].data().hits : 0
+	const hits = !query.empty ? query.docs[0].data().hits : 0
 
 	return {
 		props: {
