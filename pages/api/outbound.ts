@@ -12,16 +12,24 @@ const handler: NextApiHandler = async (req, res) => {
     .collection('links')
     .where('href', '==', href)
     .get()
+
+
+  let doc
   if (query.docs.length === 0) {
-    await firebaseAdmin.firestore().collection('links').doc().create({
+    doc = firebaseAdmin.firestore().collection('links').doc()
+    await doc.create({
       href,
       outbounds: 1,
     })
   } else {
-    await query.docs[0].ref.update({
+    doc = query.docs[0].ref
+    await doc.update({
       outbounds: firestore.FieldValue.increment(1),
     })
   }
+  doc.collection('outbounds').doc().create({
+    timestamp: firestore.FieldValue.serverTimestamp()
+  })
 
   res.end()
 }

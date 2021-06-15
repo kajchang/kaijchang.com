@@ -14,16 +14,23 @@ const handler: NextApiHandler = async (req, res) => {
 		.collection('pages')
 		.where('path', '==', path)
 		.get()
+
+	let doc
 	if (query.docs.length === 0) {
-		await firebaseAdmin.firestore().collection('pages').doc().create({
+		doc = firebaseAdmin.firestore().collection('pages').doc()
+		await doc.create({
 			path,
 			hits: 1,
 		})
 	} else {
-		await query.docs[0].ref.update({
+		doc = query.docs[0].ref
+		await doc.update({
 			hits: firestore.FieldValue.increment(1),
 		})
 	}
+	doc.collection('hits').doc().create({
+		timestamp: firestore.FieldValue.serverTimestamp()
+	})
 
 	res.end()
 }
