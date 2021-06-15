@@ -13,6 +13,7 @@ import {
 import moment from 'moment'
 import firebaseAdmin from '../src/modules/firebase-admin'
 
+import Section from '../src/components/section'
 import SectionDivider from '../src/components/section-divider'
 import SectionVerticalHeading from '../src/components/section-vertical-heading'
 import RoughUnderlinedLink from '../src/components/rough-underlined-link'
@@ -52,7 +53,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 				</Text>
 			</Stack>
 			<SectionDivider />
-			<Box as="section" position="relative" pl={16}>
+			<Section>
 				<SectionVerticalHeading>links</SectionVerticalHeading>
 				<List textAlign="left">
 					<ListItem>
@@ -80,9 +81,9 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 						</RoughUnderlinedLink>
 					</ListItem>
 				</List>
-			</Box>
+			</Section>
 			<SectionDivider />
-			<Box as="section" position="relative" pl={16}>
+			<Section>
 				<SectionVerticalHeading>projects</SectionVerticalHeading>
 				<List textAlign="left">
 					<ListItem>
@@ -120,9 +121,9 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 						— 🏫 collection of tools reverse-engineering StudentVue's SOAP API
 					</ListItem>
 				</List>
-			</Box>
+			</Section>
 			<SectionDivider />
-			<Box as="section" position="relative" pl={16}>
+			<Section>
 				<SectionVerticalHeading>analytics</SectionVerticalHeading>
 				<Text>
 					this page collects anonymized data on page hits and outbound link
@@ -145,7 +146,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					this page has <Stat>{hits}</Stat> hits since <Stat>6/14/21</Stat>, as
 					of <Stat>{moment(revalidatedAt).fromNow()}</Stat>.
 				</Text>
-			</Box>
+			</Section>
 		</Stack>
 	</Container>
 )
