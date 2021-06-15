@@ -1,4 +1,5 @@
 import { NextApiHandler } from 'next'
+import { firestore } from 'firebase-admin'
 import firebaseAdmin from '../../src/modules/firebase-admin'
 import url from 'url'
 
@@ -20,7 +21,7 @@ const handler: NextApiHandler = async (req, res) => {
 		})
 	} else {
 		await query.docs[0].ref.update({
-			hits: query.docs[0].data().hits + 1,
+			hits: firestore.FieldValue.increment(1),
 		})
 	}
 
