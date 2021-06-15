@@ -1,3 +1,4 @@
+import { GetStaticProps, NextPage } from 'next'
 import {
 	Box,
 	Container,
@@ -9,14 +10,23 @@ import {
 	Text,
 } from '@chakra-ui/react'
 
+import moment from 'moment'
+import firebaseAdmin from '../src/modules/firebase-admin'
+
 import SectionDivider from '../src/components/section-divider'
 import SectionVerticalHeading from '../src/components/section-vertical-heading'
 import RoughUnderlinedLink from '../src/components/rough-underlined-link'
+import Stat from '../src/components/stat'
 
-const Landing: React.FC = () => (
+type LandingPageProps = {
+	hits: number
+	revalidatedAt: string
+}
+
+const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 	<Container maxW={400}>
-		<Stack textAlign="center" py={12} spacing={6}>
-			<Stack as="section" alignSelf="center">
+		<Stack py={12} spacing={6}>
+			<Stack textAlign="center" as="section" alignSelf="center">
 				<Heading
 					as="h1"
 					fontWeight="extrabold"
@@ -42,9 +52,9 @@ const Landing: React.FC = () => (
 				</Text>
 			</Stack>
 			<SectionDivider />
-			<Box as="section" position="relative">
+			<Box as="section" position="relative" pl={16}>
 				<SectionVerticalHeading>links</SectionVerticalHeading>
-				<List ml={16} textAlign="left">
+				<List textAlign="left">
 					<ListItem>
 						<RoughUnderlinedLink href="mailto:kaijchang@gmail.com" isExternal>
 							kaijchang@gmail.com
@@ -72,9 +82,9 @@ const Landing: React.FC = () => (
 				</List>
 			</Box>
 			<SectionDivider />
-			<Box as="section" position="relative">
-				<SectionVerticalHeading>more</SectionVerticalHeading>
-				<List ml={16} textAlign="left">
+			<Box as="section" position="relative" pl={16}>
+				<SectionVerticalHeading>projects</SectionVerticalHeading>
+				<List textAlign="left">
 					<ListItem>
 						<RoughUnderlinedLink href="https://run.kaijchang.com" isExternal>
 							run.kaijchang.com
@@ -111,8 +121,50 @@ const Landing: React.FC = () => (
 					</ListItem>
 				</List>
 			</Box>
+			<SectionDivider />
+			<Box as="section" position="relative" pl={16}>
+				<SectionVerticalHeading>analytics</SectionVerticalHeading>
+				<Text>
+					this page collects anonymized data on page hits and outbound link
+					clicks. see the code{' '}
+					<RoughUnderlinedLink
+						href="https://github.com/kajchang/kaijchang.com/blob/master/pages/api/hit.ts"
+						isExternal>
+						here
+					</RoughUnderlinedLink>{' '}
+					and{' '}
+					<RoughUnderlinedLink
+						href="https://github.com/kajchang/kaijchang.com/blob/master/pages/api/outbound.ts"
+						isExternal>
+						here
+					</RoughUnderlinedLink>
+					.
+				</Text>
+				<br />
+				<Text>
+					this page has <Stat>{hits}</Stat> hits since <Stat>6/14/21</Stat>, as
+					of <Stat>{moment(revalidatedAt).fromNow()}</Stat>.
+				</Text>
+			</Box>
 		</Stack>
 	</Container>
 )
 
-export default Landing
+export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
+	const query = await firebaseAdmin
+		.firestore()
+		.collection('pages')
+		.where('path', '==', '/')
+		.get()
+	const hits = query.docs[0] ? query.docs[0].data().hits : 0
+
+	return {
+		props: {
+			hits,
+			revalidatedAt: new Date().toString(),
+		},
+		revalidate: 5 * 60,
+	}
+}
+
+export default LandingPage
