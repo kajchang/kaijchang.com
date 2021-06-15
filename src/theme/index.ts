@@ -1,5 +1,7 @@
 import { extendTheme, ThemeOverride } from '@chakra-ui/react'
 
+const linkTransition = '.5s ease'
+
 const overrides: ThemeOverride = {
 	fonts: {
 		body: 'Open Sans, sans-serif',
@@ -11,6 +13,10 @@ const overrides: ThemeOverride = {
 		global: {
 			'a:link, a:visited, a:hover, a:active': {
 				textDecoration: 'none !important',
+				transition: `color ${linkTransition}`,
+			},
+			'a:hover': {
+				color: 'white'
 			},
 			'a:after': {
 				content: '""',
@@ -21,7 +27,7 @@ const overrides: ThemeOverride = {
 				right: 0,
 				top: 0,
 				background: 'var(--chakra-colors-orange-400)',
-				transition: 'width .5s ease',
+				transition: `width ${linkTransition}`,
 				zIndex: -1,
 			},
 			'a:hover:after': {
