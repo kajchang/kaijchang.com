@@ -7,5 +7,6 @@ public/
 .eslintrc
 yarn.lock
 .prettierignore
+.env
 .env.local
 LICENSE
