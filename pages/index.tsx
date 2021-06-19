@@ -125,6 +125,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					</ListItem>
 				</List>
 			</Section>
+			{/*
 			<SectionDivider />
 			<Section>
 				<SectionVerticalHeading>analytics</SectionVerticalHeading>
@@ -149,7 +150,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					this page has <Stat>{hits}</Stat> hits since <Stat>6/14/21</Stat>, as
 					of <Stat>{dayjs(revalidatedAt).fromNow()}</Stat>.
 				</Text>
-			</Section>
+			</Section>*/}
 		</Stack>
 	</Container>
 )
