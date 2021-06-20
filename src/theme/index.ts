@@ -12,7 +12,7 @@ const overrides: ThemeOverride = {
 	styles: {
 		global: {
 			body: {
-				backgroundColor: 'black',
+				backgroundColor: 'gray.800',
 				color: 'orange.600',
 			},
 			'a:link, a:visited, a:hover, a:active': {
@@ -35,7 +35,7 @@ const overrides: ThemeOverride = {
 				display: 'block',
 				right: 0,
 				top: 0,
-				background: 'var(--chakra-colors-orange-600)',
+				background: 'var(--chakra-colors-orange-400)',
 				transition: `width ${linkTransition}`,
 				zIndex: -1,
 			},
