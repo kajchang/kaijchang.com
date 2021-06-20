@@ -28,100 +28,99 @@ type LandingPageProps = {
 }
 
 const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
-	<Box backgroundColor="black" color="pink-citrus">
-		<Container maxW={400}>
-			<Stack py={12} spacing={6}>
-				<Stack as="section" textAlign="center" alignSelf="center">
-					<Heading
-						as="h1"
-						fontWeight="extrabold"
-						letterSpacing="tight"
-						fontSize="2xl">
-						Kai Chang
-					</Heading>
-					<Flex direction="row" alignSelf="center" fontSize="lg">
-						<Text as="span" fontFamily="korean">
-							장준수
-						</Text>{' '}
-						<Text fontWeight="extrabold" fontFamily="heading" mx={1}>
-							|
-						</Text>{' '}
-						<Text as="span" fontFamily="chinese">
-							张俊洙
-						</Text>
-					</Flex>
-					<Text fontWeight="semibold">vassar college &apos;25</Text>
-					<Text fontWeight="semibold">
-						web development @{' '}
-						<Link href="https://petcodeusa.com" isExternal>
-							petcode
-						</Link>
+	<Container maxW={400}>
+		<Stack py={12} spacing={6}>
+			<Stack as="section" textAlign="center" alignSelf="center">
+				<Heading
+					as="h1"
+					fontWeight="extrabold"
+					letterSpacing="tight"
+					fontSize="2xl">
+					Kai Chang
+				</Heading>
+				<Flex direction="row" alignSelf="center" fontSize="lg">
+					<Text as="span" fontFamily="korean">
+						장준수
+					</Text>{' '}
+					<Text fontWeight="extrabold" fontFamily="heading" mx={1}>
+						|
+					</Text>{' '}
+					<Text as="span" fontFamily="chinese">
+						张俊洙
 					</Text>
-				</Stack>
-				<SectionDivider />
-				<Section>
-					<SectionVerticalHeading>links</SectionVerticalHeading>
-					<List textAlign="left">
-						<ListItem>
-							<Link href="mailto:kaijchang@gmail.com" isExternal>
-								kaijchang@gmail.com
-							</Link>
-						</ListItem>
-						<ListItem>
-							<Link href="https://github.com/kajchang" isExternal>
-								github
-							</Link>
-						</ListItem>
-						<ListItem>
-							<Link href="https://www.linkedin.com/in/kai-j-chang" isExternal>
-								linkedin
-							</Link>
-						</ListItem>
-						<ListItem>
-							<Link href="https://twitter.com/kachangggg" isExternal>
-								twitter
-							</Link>
-						</ListItem>
-					</List>
-				</Section>
-				<SectionDivider />
-				<Section>
-					<SectionVerticalHeading>projects</SectionVerticalHeading>
-					<List textAlign="left">
-						<ListItem>
-							<Link href="https://run.kaijchang.com" isExternal>
-								run.kaijchang.com
-							</Link>{' '}
-							— 👟 auto-generated running map
-						</ListItem>
-						<ListItem>
-							<Link href="https://firebrand.kaijchang.com" isExternal>
-								firebrand.kaijchang.com
-							</Link>{' '}
-							— 🇺🇸 toy site calculating ELO for U.S. politicians
-						</ListItem>
-						<ListItem>
-							<Link href="https://vote.lowellhs.org" isExternal>
-								vote.lowellhs.org
-							</Link>{' '}
-							— 🗳️ results of lowell&apos;s 2020 mock primary election survey
-						</ListItem>
-						<ListItem>
-							<Link href="https://studentsreview.me" isExternal>
-								studentsreview.me [closed]
-							</Link>{' '}
-							— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
-						</ListItem>
-						<ListItem>
-							<Link href="https://github.com/StudentVue" isExternal>
-								StudentVue
-							</Link>{' '}
-							— 🏫 collection of tools reverse-engineering StudentVue&apos;s
-							SOAP API
-						</ListItem>
-					</List>
-				</Section>
-				{/*
+				</Flex>
+				<Text fontWeight="semibold">vassar college &apos;25</Text>
+				<Text fontWeight="semibold">
+					web development @{' '}
+					<Link href="https://petcodeusa.com" isExternal>
+						petcode
+					</Link>
+				</Text>
+			</Stack>
+			<SectionDivider />
+			<Section>
+				<SectionVerticalHeading>links</SectionVerticalHeading>
+				<List textAlign="left">
+					<ListItem>
+						<Link href="mailto:kaijchang@gmail.com" isExternal>
+							kaijchang@gmail.com
+						</Link>
+					</ListItem>
+					<ListItem>
+						<Link href="https://github.com/kajchang" isExternal>
+							github
+						</Link>
+					</ListItem>
+					<ListItem>
+						<Link href="https://www.linkedin.com/in/kai-j-chang" isExternal>
+							linkedin
+						</Link>
+					</ListItem>
+					<ListItem>
+						<Link href="https://twitter.com/kachangggg" isExternal>
+							twitter
+						</Link>
+					</ListItem>
+				</List>
+			</Section>
+			<SectionDivider />
+			<Section>
+				<SectionVerticalHeading>projects</SectionVerticalHeading>
+				<List textAlign="left">
+					<ListItem>
+						<Link href="https://run.kaijchang.com" isExternal>
+							run.kaijchang.com
+						</Link>{' '}
+						— 👟 auto-generated running map
+					</ListItem>
+					<ListItem>
+						<Link href="https://firebrand.kaijchang.com" isExternal>
+							firebrand.kaijchang.com
+						</Link>{' '}
+						— 🇺🇸 toy site calculating ELO for U.S. politicians
+					</ListItem>
+					<ListItem>
+						<Link href="https://vote.lowellhs.org" isExternal>
+							vote.lowellhs.org
+						</Link>{' '}
+						— 🗳️ results of lowell&apos;s 2020 mock primary election survey
+					</ListItem>
+					<ListItem>
+						<Link href="https://studentsreview.me" isExternal>
+							studentsreview.me [closed]
+						</Link>{' '}
+						— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
+					</ListItem>
+					<ListItem>
+						<Link href="https://github.com/StudentVue" isExternal>
+							StudentVue
+						</Link>{' '}
+						— 🏫 collection of tools reverse-engineering StudentVue&apos;s SOAP
+						API
+					</ListItem>
+				</List>
+			</Section>
+			{/*
 			<SectionDivider />
 			<Section>
 				<SectionVerticalHeading>analytics</SectionVerticalHeading>
@@ -147,9 +146,8 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					of <Stat>{dayjs(revalidatedAt).fromNow()}</Stat>.
 				</Text>
 			</Section>*/}
-			</Stack>
-		</Container>
-	</Box>
+		</Stack>
+	</Container>
 )
 
 export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {

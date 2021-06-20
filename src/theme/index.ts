@@ -14,6 +14,10 @@ const overrides: ThemeOverride = {
 	},
 	styles: {
 		global: {
+			body: {
+				backgroundColor: 'black',
+				color: 'pink-citrus',
+			},
 			'a:link, a:visited, a:hover, a:active': {
 				position: 'relative',
 				fontWeight: 'bold',
