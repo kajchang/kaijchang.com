@@ -4,6 +4,7 @@ import {
 	Container,
 	Flex,
 	Heading,
+	Link,
 	List,
 	ListItem,
 	Stack,
@@ -15,8 +16,6 @@ import firebaseAdmin from 'modules/firebase-admin'
 import Section from 'components/section'
 import SectionDivider from 'components/rough/section-divider'
 import SectionVerticalHeading from 'components/section-vertical-heading'
-import RoughUnderlinedLink from 'components/rough/rough-underlined-link'
-import Stat from 'components/stat'
 
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
@@ -54,9 +53,9 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					<Text fontWeight="semibold">vassar college '25</Text>
 					<Text fontWeight="semibold">
 						web development @{' '}
-						<RoughUnderlinedLink href="https://petcodeusa.com" isExternal>
+						<Link href="https://petcodeusa.com" isExternal>
 							petcode
-						</RoughUnderlinedLink>
+						</Link>
 					</Text>
 				</Stack>
 				<SectionDivider />
@@ -64,30 +63,24 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					<SectionVerticalHeading>links</SectionVerticalHeading>
 					<List textAlign="left">
 						<ListItem>
-							<RoughUnderlinedLink href="mailto:kaijchang@gmail.com" isExternal>
+							<Link href="mailto:kaijchang@gmail.com" isExternal>
 								kaijchang@gmail.com
-							</RoughUnderlinedLink>
+							</Link>
 						</ListItem>
 						<ListItem>
-							<RoughUnderlinedLink
-								href="https://github.com/kajchang"
-								isExternal>
+							<Link href="https://github.com/kajchang" isExternal>
 								github
-							</RoughUnderlinedLink>
+							</Link>
 						</ListItem>
 						<ListItem>
-							<RoughUnderlinedLink
-								href="https://www.linkedin.com/in/kai-j-chang"
-								isExternal>
+							<Link href="https://www.linkedin.com/in/kai-j-chang" isExternal>
 								linkedin
-							</RoughUnderlinedLink>
+							</Link>
 						</ListItem>
 						<ListItem>
-							<RoughUnderlinedLink
-								href="https://twitter.com/kachangggg"
-								isExternal>
+							<Link href="https://twitter.com/kachangggg" isExternal>
 								twitter
-							</RoughUnderlinedLink>
+							</Link>
 						</ListItem>
 					</List>
 				</Section>
@@ -96,37 +89,33 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					<SectionVerticalHeading>projects</SectionVerticalHeading>
 					<List textAlign="left">
 						<ListItem>
-							<RoughUnderlinedLink href="https://run.kaijchang.com" isExternal>
+							<Link href="https://run.kaijchang.com" isExternal>
 								run.kaijchang.com
-							</RoughUnderlinedLink>{' '}
+							</Link>{' '}
 							— 👟 auto-generated running map
 						</ListItem>
 						<ListItem>
-							<RoughUnderlinedLink
-								href="https://firebrand.kaijchang.com"
-								isExternal>
+							<Link href="https://firebrand.kaijchang.com" isExternal>
 								firebrand.kaijchang.com
-							</RoughUnderlinedLink>{' '}
+							</Link>{' '}
 							— 🇺🇸 toy site calculating ELO for U.S. politicians
 						</ListItem>
 						<ListItem>
-							<RoughUnderlinedLink href="https://vote.lowellhs.org" isExternal>
+							<Link href="https://vote.lowellhs.org" isExternal>
 								vote.lowellhs.org
-							</RoughUnderlinedLink>{' '}
+							</Link>{' '}
 							— 🗳️ results of lowell's 2020 mock primary election survey
 						</ListItem>
 						<ListItem>
-							<RoughUnderlinedLink href="https://studentsreview.me" isExternal>
+							<Link href="https://studentsreview.me" isExternal>
 								studentsreview.me [closed]
-							</RoughUnderlinedLink>{' '}
+							</Link>{' '}
 							— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
 						</ListItem>
 						<ListItem>
-							<RoughUnderlinedLink
-								href="https://github.com/StudentVue"
-								isExternal>
+							<Link href="https://github.com/StudentVue" isExternal>
 								StudentVue
-							</RoughUnderlinedLink>{' '}
+							</Link>{' '}
 							— 🏫 collection of tools reverse-engineering StudentVue's SOAP API
 						</ListItem>
 					</List>
@@ -138,17 +127,17 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 				<Text>
 					this page collects anonymized data on page hits and outbound link
 					clicks. see the code{' '}
-					<RoughUnderlinedLink
+					<Link
 						href="https://github.com/kajchang/kaijchang.com/blob/master/pages/api/hit.ts"
 						isExternal>
 						here
-					</RoughUnderlinedLink>{' '}
+					</Link>{' '}
 					and{' '}
-					<RoughUnderlinedLink
+					<Link
 						href="https://github.com/kajchang/kaijchang.com/blob/master/pages/api/outbound.ts"
 						isExternal>
 						here
-					</RoughUnderlinedLink>
+					</Link>
 					.
 				</Text>
 				<br />

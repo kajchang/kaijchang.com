@@ -15,9 +15,12 @@ const overrides: ThemeOverride = {
 	styles: {
 		global: {
 			'a:link, a:visited, a:hover, a:active': {
-				textDecoration: 'none !important',
+				position: 'relative',
+				textDecoration: 'underline !important',
+				textDecorationThickness: '2px',
+				textUnderlineOffset: '2px',
 				transition: `color ${linkTransition}`,
-				zIndex: 1
+				zIndex: 1,
 			},
 			'a:hover': {
 				color: 'black'
