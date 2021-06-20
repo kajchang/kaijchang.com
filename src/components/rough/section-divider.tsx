@@ -1,7 +1,7 @@
 import { SVGAttributes, useMemo } from 'react'
 import uid from 'util/uid'
 
-import Rough from 'components/rough'
+import Rough from 'components/rough/rough'
 
 const SectionDivider: React.FC<SVGAttributes<SVGSVGElement>> = (props) => {
 	const seed = useMemo(() => uid(), [])

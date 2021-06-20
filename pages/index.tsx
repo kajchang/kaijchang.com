@@ -13,9 +13,9 @@ import {
 import firebaseAdmin from 'modules/firebase-admin'
 
 import Section from 'components/section'
-import SectionDivider from 'components/section-divider'
+import SectionDivider from 'components/rough/section-divider'
 import SectionVerticalHeading from 'components/section-vertical-heading'
-import RoughUnderlinedLink from 'components/rough-underlined-link'
+import RoughUnderlinedLink from 'components/rough/rough-underlined-link'
 import Stat from 'components/stat'
 
 import dayjs from 'dayjs'
