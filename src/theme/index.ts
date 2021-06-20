@@ -4,7 +4,7 @@ const linkTransition = '.5s ease'
 
 const overrides: ThemeOverride = {
 	colors: {
-		'pink-citrus': '#F05047'
+		'pink-citrus': '#F05047',
 	},
 	fonts: {
 		body: 'Open Sans, sans-serif',
@@ -24,7 +24,7 @@ const overrides: ThemeOverride = {
 				zIndex: 1,
 			},
 			'a:hover': {
-				color: 'black'
+				color: 'black',
 			},
 			'a:after': {
 				content: '""',

@@ -2,8 +2,6 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
 	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
-	"editor.lineNumbers": "on",
-	"discord.enabled": true
+	"editor.lineNumbers": "on"
 }

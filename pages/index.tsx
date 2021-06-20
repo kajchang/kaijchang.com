@@ -50,7 +50,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 							张俊洙
 						</Text>
 					</Flex>
-					<Text fontWeight="semibold">vassar college '25</Text>
+					<Text fontWeight="semibold">vassar college &apos;25</Text>
 					<Text fontWeight="semibold">
 						web development @{' '}
 						<Link href="https://petcodeusa.com" isExternal>
@@ -104,7 +104,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 							<Link href="https://vote.lowellhs.org" isExternal>
 								vote.lowellhs.org
 							</Link>{' '}
-							— 🗳️ results of lowell's 2020 mock primary election survey
+							— 🗳️ results of lowell&apos;s 2020 mock primary election survey
 						</ListItem>
 						<ListItem>
 							<Link href="https://studentsreview.me" isExternal>
@@ -116,7 +116,8 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 							<Link href="https://github.com/StudentVue" isExternal>
 								StudentVue
 							</Link>{' '}
-							— 🏫 collection of tools reverse-engineering StudentVue's SOAP API
+							— 🏫 collection of tools reverse-engineering StudentVue&apos;s
+							SOAP API
 						</ListItem>
 					</List>
 				</Section>

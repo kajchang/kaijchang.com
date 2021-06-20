@@ -29,7 +29,7 @@ const handler: NextApiHandler = async (req, res) => {
 		})
 	}
 	doc.collection('hits').doc().create({
-		timestamp: firestore.FieldValue.serverTimestamp()
+		timestamp: firestore.FieldValue.serverTimestamp(),
 	})
 
 	res.end()
