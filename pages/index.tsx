@@ -1,4 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
 import {
 	Box,
 	Container,
@@ -29,6 +30,9 @@ type LandingPageProps = {
 
 const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 	<Container maxW={400}>
+		<Head>
+			<title>Kai Chang</title>
+		</Head>
 		<Stack py={12} spacing={6}>
 			<Stack as="section" textAlign="center" alignSelf="center">
 				<Heading

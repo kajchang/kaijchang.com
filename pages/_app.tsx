@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ChakraProvider } from '@chakra-ui/react'
 
@@ -27,13 +26,6 @@ const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
 	return (
 		<ChakraProvider theme={customTheme}>
-			<Head>
-				<title>Kai Chang</title>
-				<meta
-					name="description"
-					content="Kai Chang · web development @ petcode"
-				/>
-			</Head>
 			<Component {...pageProps} />
 		</ChakraProvider>
 	)
