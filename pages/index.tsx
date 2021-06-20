@@ -14,7 +14,7 @@ import {
 import firebaseAdmin from 'modules/firebase-admin'
 
 import Section from 'components/section'
-import SectionDivider from 'components/rough/section-divider'
+import SectionDivider from 'components/section-divider'
 import SectionVerticalHeading from 'components/section-vertical-heading'
 
 import dayjs from 'dayjs'
@@ -31,7 +31,7 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 	<Box backgroundColor="black" color="pink-citrus">
 		<Container maxW={400}>
 			<Stack py={12} spacing={6}>
-				<Stack textAlign="center" as="section" alignSelf="center">
+				<Stack as="section" textAlign="center" alignSelf="center">
 					<Heading
 						as="h1"
 						fontWeight="extrabold"

@@ -16,8 +16,9 @@ const overrides: ThemeOverride = {
 		global: {
 			'a:link, a:visited, a:hover, a:active': {
 				position: 'relative',
+				fontWeight: 'bold',
 				textDecoration: 'underline !important',
-				textDecorationThickness: '2px',
+				textDecorationThickness: '2px !important',
 				textUnderlineOffset: '2px',
 				transition: `color ${linkTransition}`,
 				zIndex: 1,
