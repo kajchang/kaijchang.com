@@ -21,11 +21,7 @@ const overrides: ThemeOverride = {
 				textDecoration: 'underline !important',
 				textDecorationThickness: '2px !important',
 				textUnderlineOffset: '2px',
-				transition: `color ${linkTransition}`,
 				zIndex: 1,
-			},
-			'a:hover': {
-				color: 'black',
 			},
 			'a:after': {
 				content: '""',
@@ -35,7 +31,7 @@ const overrides: ThemeOverride = {
 				display: 'block',
 				right: 0,
 				top: 0,
-				background: 'var(--chakra-colors-orange-400)',
+				background: 'var(--chakra-colors-gray-300)',
 				transition: `width ${linkTransition}`,
 				zIndex: -1,
 			},
