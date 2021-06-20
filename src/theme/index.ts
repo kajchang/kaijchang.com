@@ -3,6 +3,9 @@ import { extendTheme, ThemeOverride } from '@chakra-ui/react'
 const linkTransition = '.5s ease'
 
 const overrides: ThemeOverride = {
+	colors: {
+		'pink-citrus': '#F05047'
+	},
 	fonts: {
 		body: 'Open Sans, sans-serif',
 		heading: 'Montserrat, sans-serif',
@@ -14,9 +17,10 @@ const overrides: ThemeOverride = {
 			'a:link, a:visited, a:hover, a:active': {
 				textDecoration: 'none !important',
 				transition: `color ${linkTransition}`,
+				zIndex: 1
 			},
 			'a:hover': {
-				color: 'white'
+				color: 'black'
 			},
 			'a:after': {
 				content: '""',
@@ -26,7 +30,7 @@ const overrides: ThemeOverride = {
 				display: 'block',
 				right: 0,
 				top: 0,
-				background: 'var(--chakra-colors-orange-400)',
+				background: 'var(--chakra-colors-pink-citrus)',
 				transition: `width ${linkTransition}`,
 				zIndex: -1,
 			},

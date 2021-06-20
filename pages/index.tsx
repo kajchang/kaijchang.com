@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next'
 import {
+	Box,
 	Container,
 	Flex,
 	Heading,
@@ -28,104 +29,109 @@ type LandingPageProps = {
 }
 
 const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
-	<Container maxW={400}>
-		<Stack py={12} spacing={6}>
-			<Stack textAlign="center" as="section" alignSelf="center">
-				<Heading
-					as="h1"
-					fontWeight="extrabold"
-					letterSpacing="tight"
-					fontSize="2xl">
-					Kai Chang
-				</Heading>
-				<Flex direction="row" alignSelf="center" fontSize="lg">
-					<Text as="span" fontFamily="korean">
-						장준수
-					</Text>{' '}
-					|{' '}
-					<Text as="span" fontFamily="chinese">
-						张俊洙
+	<Box backgroundColor="black" color="pink-citrus">
+		<Container maxW={400}>
+			<Stack py={12} spacing={6}>
+				<Stack textAlign="center" as="section" alignSelf="center">
+					<Heading
+						as="h1"
+						fontWeight="extrabold"
+						letterSpacing="tight"
+						fontSize="2xl">
+						Kai Chang
+					</Heading>
+					<Flex direction="row" alignSelf="center" fontSize="lg">
+						<Text as="span" fontFamily="korean">
+							장준수
+						</Text>{' '}
+						<Text fontWeight="extrabold" fontFamily="heading" mx={1}>
+							|
+						</Text>{' '}
+						<Text as="span" fontFamily="chinese">
+							张俊洙
+						</Text>
+					</Flex>
+					<Text fontWeight="semibold">vassar college '25</Text>
+					<Text fontWeight="semibold">
+						web development @{' '}
+						<RoughUnderlinedLink href="https://petcodeusa.com" isExternal>
+							petcode
+						</RoughUnderlinedLink>
 					</Text>
-				</Flex>
-				<Text fontWeight="semibold">vassar college '25</Text>
-				<Text fontWeight="semibold">
-					web development @{' '}
-					<RoughUnderlinedLink href="https://petcodeusa.com" isExternal>
-						petcode
-					</RoughUnderlinedLink>
-				</Text>
-			</Stack>
-			<SectionDivider />
-			<Section>
-				<SectionVerticalHeading>links</SectionVerticalHeading>
-				<List textAlign="left">
-					<ListItem>
-						<RoughUnderlinedLink href="mailto:kaijchang@gmail.com" isExternal>
-							kaijchang@gmail.com
-						</RoughUnderlinedLink>
-					</ListItem>
-					<ListItem>
-						<RoughUnderlinedLink href="https://github.com/kajchang" isExternal>
-							github
-						</RoughUnderlinedLink>
-					</ListItem>
-					<ListItem>
-						<RoughUnderlinedLink
-							href="https://www.linkedin.com/in/kai-j-chang"
-							isExternal>
-							linkedin
-						</RoughUnderlinedLink>
-					</ListItem>
-					<ListItem>
-						<RoughUnderlinedLink
-							href="https://twitter.com/kachangggg"
-							isExternal>
-							twitter
-						</RoughUnderlinedLink>
-					</ListItem>
-				</List>
-			</Section>
-			<SectionDivider />
-			<Section>
-				<SectionVerticalHeading>projects</SectionVerticalHeading>
-				<List textAlign="left">
-					<ListItem>
-						<RoughUnderlinedLink href="https://run.kaijchang.com" isExternal>
-							run.kaijchang.com
-						</RoughUnderlinedLink>{' '}
-						— 👟 auto-generated running map
-					</ListItem>
-					<ListItem>
-						<RoughUnderlinedLink
-							href="https://firebrand.kaijchang.com"
-							isExternal>
-							firebrand.kaijchang.com
-						</RoughUnderlinedLink>{' '}
-						— 🇺🇸 toy site calculating ELO for U.S. politicians
-					</ListItem>
-					<ListItem>
-						<RoughUnderlinedLink href="https://vote.lowellhs.org" isExternal>
-							vote.lowellhs.org
-						</RoughUnderlinedLink>{' '}
-						— 🗳️ results of lowell's 2020 mock primary election survey
-					</ListItem>
-					<ListItem>
-						<RoughUnderlinedLink href="https://studentsreview.me" isExternal>
-							studentsreview.me [closed]
-						</RoughUnderlinedLink>{' '}
-						— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
-					</ListItem>
-					<ListItem>
-						<RoughUnderlinedLink
-							href="https://github.com/StudentVue"
-							isExternal>
-							StudentVue
-						</RoughUnderlinedLink>{' '}
-						— 🏫 collection of tools reverse-engineering StudentVue's SOAP API
-					</ListItem>
-				</List>
-			</Section>
-			{/*
+				</Stack>
+				<SectionDivider />
+				<Section>
+					<SectionVerticalHeading>links</SectionVerticalHeading>
+					<List textAlign="left">
+						<ListItem>
+							<RoughUnderlinedLink href="mailto:kaijchang@gmail.com" isExternal>
+								kaijchang@gmail.com
+							</RoughUnderlinedLink>
+						</ListItem>
+						<ListItem>
+							<RoughUnderlinedLink
+								href="https://github.com/kajchang"
+								isExternal>
+								github
+							</RoughUnderlinedLink>
+						</ListItem>
+						<ListItem>
+							<RoughUnderlinedLink
+								href="https://www.linkedin.com/in/kai-j-chang"
+								isExternal>
+								linkedin
+							</RoughUnderlinedLink>
+						</ListItem>
+						<ListItem>
+							<RoughUnderlinedLink
+								href="https://twitter.com/kachangggg"
+								isExternal>
+								twitter
+							</RoughUnderlinedLink>
+						</ListItem>
+					</List>
+				</Section>
+				<SectionDivider />
+				<Section>
+					<SectionVerticalHeading>projects</SectionVerticalHeading>
+					<List textAlign="left">
+						<ListItem>
+							<RoughUnderlinedLink href="https://run.kaijchang.com" isExternal>
+								run.kaijchang.com
+							</RoughUnderlinedLink>{' '}
+							— 👟 auto-generated running map
+						</ListItem>
+						<ListItem>
+							<RoughUnderlinedLink
+								href="https://firebrand.kaijchang.com"
+								isExternal>
+								firebrand.kaijchang.com
+							</RoughUnderlinedLink>{' '}
+							— 🇺🇸 toy site calculating ELO for U.S. politicians
+						</ListItem>
+						<ListItem>
+							<RoughUnderlinedLink href="https://vote.lowellhs.org" isExternal>
+								vote.lowellhs.org
+							</RoughUnderlinedLink>{' '}
+							— 🗳️ results of lowell's 2020 mock primary election survey
+						</ListItem>
+						<ListItem>
+							<RoughUnderlinedLink href="https://studentsreview.me" isExternal>
+								studentsreview.me [closed]
+							</RoughUnderlinedLink>{' '}
+							— 🧑‍🏫 archive for lowell teachers and courses. peak 1.5k+ WAU
+						</ListItem>
+						<ListItem>
+							<RoughUnderlinedLink
+								href="https://github.com/StudentVue"
+								isExternal>
+								StudentVue
+							</RoughUnderlinedLink>{' '}
+							— 🏫 collection of tools reverse-engineering StudentVue's SOAP API
+						</ListItem>
+					</List>
+				</Section>
+				{/*
 			<SectionDivider />
 			<Section>
 				<SectionVerticalHeading>analytics</SectionVerticalHeading>
@@ -151,8 +157,9 @@ const LandingPage: NextPage<LandingPageProps> = ({ hits, revalidatedAt }) => (
 					of <Stat>{dayjs(revalidatedAt).fromNow()}</Stat>.
 				</Text>
 			</Section>*/}
-		</Stack>
-	</Container>
+			</Stack>
+		</Container>
+	</Box>
 )
 
 export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {

@@ -18,7 +18,7 @@ const SectionDivider: React.FC<SVGAttributes<SVGSVGElement>> = (props) => {
 					lastWidth = bounds.width
 					clear()
 					let node = rc.line(0, 10, bounds.width, 10, {
-						stroke: 'var(--chakra-colors-orange-400)',
+						stroke: 'var(--chakra-colors-pink-citrus)',
 						roughness: 2.5,
 						bowing: 1.5,
 						seed,
