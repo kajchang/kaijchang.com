@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ChakraProvider } from '@chakra-ui/react'
 
-import 'styles/global.css'
 import customTheme from 'theme'
 
 import { hit, outbound } from 'modules/analytics'
