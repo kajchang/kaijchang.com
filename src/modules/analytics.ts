@@ -1,4 +1,12 @@
-export const hit = () => fetch('/api/hit')
+const beaconOrFetch = (url: string) => {
+	if (typeof navigator.sendBeacon !== 'undefined') {
+		navigator.sendBeacon(url)
+	} else {
+		fetch(url)
+	}
+}
+
+export const hit = () => beaconOrFetch('/api/hit')
 
 export const outbound = (href: string) =>
-	fetch(`/api/outbound?href=${encodeURIComponent(href)}`)
+	beaconOrFetch(`/api/outbound?href=${encodeURIComponent(href)}`)
