@@ -22,7 +22,7 @@ const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 			document.addEventListener('click', clickListener as any)
 			return () => document.removeEventListener('click', clickListener as any)
 		}
-	}, [router.isReady])
+	}, [router.isReady, router.query.dont_track])
 
 	return (
 		<ChakraProvider theme={customTheme}>
